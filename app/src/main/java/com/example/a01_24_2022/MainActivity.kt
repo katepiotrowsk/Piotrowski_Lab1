@@ -1,6 +1,7 @@
 package com.example.a01_24_2022
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -32,6 +33,24 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        Log.i("KPInfo", "Resumed the App")
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        Log.i("KPInfo", "Paused the App")
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        Log.i("KPInfo", "Stopped the App")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
